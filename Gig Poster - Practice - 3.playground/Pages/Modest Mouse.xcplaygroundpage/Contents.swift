@@ -31,6 +31,30 @@ let deepYellow = Color(hue: 46, saturation: 99, brightness: 99, alpha: 100)
 let black = Color(hue: 0, saturation: 100, brightness: 0, alpha: 100)
 
 // Begin your solution here...
+canvas.drawAxes()
+
+// Background
+canvas.fillColor = lightGrey
+canvas.drawEllipse(at: Point(x:200, y:300), width: 600, height: 800)
+
+// Move the origin
+canvas.translate(to: Point (x: 0, y: 400))
+
+// Rotate origin
+canvas.rotate(by: -400)
+
+
+for x in stride(from: 19, to: 19*40, by: 40) {
+    
+    // make lines
+    canvas.drawLine(from: Point (x: x, y: 250), to: Point (x: x, y: -400), lineWidth: 20, capStyle:.square)
+    
+}
+   
+
+// Rotate origin
+canvas.rotate(by: 400)
+
 
 
 /*:
@@ -44,4 +68,5 @@ let black = Color(hue: 0, saturation: 100, brightness: 0, alpha: 100)
  The code below is necessary to see results in the Assistant Editor at right. Please do not remove.
  */
 PlaygroundPage.current.liveView = canvas
+
 
