@@ -36,7 +36,6 @@ canvas.drawAxes()
 // Background
 canvas.fillColor = lightGrey
 canvas.drawEllipse(at: Point(x:200, y:300), width: 600, height: 800)
-
 // Move the origin
 canvas.translate(to: Point (x: 0, y: 400))
 
@@ -50,7 +49,8 @@ for x in stride(from: 19, to: 19*40, by: 40) {
     canvas.drawLine(from: Point (x: x, y: 250), to: Point (x: x, y: -400), lineWidth: 20, capStyle:.square)
     
 }
-   
+canvas.fillColor = deepYellow
+canvas.drawRectangle(at: Point(x:10, y:400), width:500, height:300)
 
 // Rotate origin
 canvas.rotate(by: 400)
